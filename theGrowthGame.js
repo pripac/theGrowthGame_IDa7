@@ -79,3 +79,19 @@ var greenOnion= {
 }
 
 var cards = [lettuce, carrot, kale, onion, garlic, potato, tomato, greenOnion]
+
+var systemCard;
+
+var playerCard;
+
+function pickCard() {
+   var numSyCard = parseInt(Math.random() *8);
+   systemCard = cards[numSyCard];
+console.log(systemCard)
+   var numPlCard = parseInt(Math.random() *8);
+   while (numSyCard == numPlCard){
+    numPlCard = parseInt(Math.random() *8)
+   }
+   playerCard = cards[numPlCard];
+   console.log(playerCard)
+}
