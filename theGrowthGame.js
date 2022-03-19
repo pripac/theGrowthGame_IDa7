@@ -128,17 +128,17 @@ function getSelectedAttribute(){
 
 function play(){
     let selectedAttribute = getSelectedAttribute();
-    const getDivResult = document.getElementById('result');
+    const divResult = document.getElementById('result');
     let plCardValue = playerCard.attributes[selectedAttribute];
     let syCardValue = systemCard.attributes[selectedAttribute];
 
     if (plCardValue > syCardValue){
-        alert('Congratulations, you have won!')
+        divResult.innerHTML = 'Congratulations, you have won!'
     } else if (syCardValue > plCardValue){
-        alert('The system has won.')
+        divResult.innerHTML ='The system has won.'
     } else if (plCardValue == syCardValue){
-        alert("It's a draw.")
+        divResult.innerHTML ="It's a draw."
     } else {
-        alert("Error 404 (or probably other code)")
+        divResult.innerHTML ="Error 404 (or probably other code)"
     }
 }
