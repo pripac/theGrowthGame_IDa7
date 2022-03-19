@@ -100,6 +100,7 @@ function pickCard() {
  document.getElementById("btnSort").disabled = true;
  document.getElementById("btnPlay").disabled = false;
  displayOptions()
+ displayPlCard()
 }
 
 function displayOptions() {
@@ -141,4 +142,9 @@ function play(){
     } else {
         divResult.innerHTML ="Error 404 (or probably other code)"
     }
+}
+
+function displayPlCard(){
+    var divPlCard = document.getElementById('player-Card');
+    divPlCard.style.backgroundImage= `url(${playerCard.img})`
 }
